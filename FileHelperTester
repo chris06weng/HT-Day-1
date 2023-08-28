@@ -1,0 +1,9 @@
+public class FileHelperTester
+{
+    public static void main (String [] args)
+    {
+        FileHelper fh = new FileHelper ();
+        fh.stringToFile ("filetester.txt", "abcdefg");
+        fh.fileToString ("filetester2.txt");
+9    }
+}
