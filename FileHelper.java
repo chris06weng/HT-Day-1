@@ -1,5 +1,14 @@
+<<<<<<< Updated upstream
 import java.io.*;
 import java.util.*;
+=======
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+>>>>>>> Stashed changes
 
 public class FileHelper {
     boolean exists;
@@ -17,17 +26,27 @@ public class FileHelper {
         pw.close();
     }
 
+<<<<<<< Updated upstream
     public String fileToString(File fileName) throws IOException {
         StringBuilder record = new StringBuilder("");
         BufferedReader text = new BufferedReader(new FileReader(fileName));
 
         while (text.ready()) {
             record.append((char) text.read());
+=======
+    public String fileToString(String fileName) throws FileNotFoundException, IOException {
+        String record = "";
+        BufferedReader text = new BufferedReader(new FileReader(fileName));
+
+        while (text.ready()) {
+            record += (char) (text.read());
+>>>>>>> Stashed changes
         }
 
         text.close();
         return record.toString();
     }
+<<<<<<< Updated upstream
 
     public int countCharacters(String fileName) {
 
@@ -54,4 +73,6 @@ public class FileHelper {
         }
 
     }
+=======
+>>>>>>> Stashed changes
 }
